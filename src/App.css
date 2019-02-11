@@ -1,5 +1,13 @@
+:root {
+  --button-colour: '#f69ac6';
+}
+
 .App {
   text-align: center;
+}
+
+.App-about {
+  text-align: left;
 }
 
 .App-logo {
@@ -29,4 +37,59 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.button {
+  background-color: var(--button-colour);
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  display: inline-block;
+  font-size: calc(10px + 2vmin);
+  border-radius: 8px;
+}
+
+.header {
+  overflow: hidden;
+  background-color: var(--button-colour);
+  padding: 20px 10px;
+}
+
+.header a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+.header a.logo {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.header a:hover {
+  background-color: #ff52a5;
+  color: black;
+}
+
+.header a.active {
+  background-color: dodgerblue;
+  color: white;
+}
+
+.header-right {
+  float: right;
+}
+
+#space {
+  height: 550px;
+}
+
+@media print {
+  p {page-break-after: always;}
 }

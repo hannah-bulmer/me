@@ -21,8 +21,8 @@ class App extends Component {
       <Header />
         <h1>HELLO</h1>
         <h2>This is my website</h2>
-        <Button name="colour"/>
         <Button name="essay"/>
+        <Button name="colour"/>
         </div>
         <p id="space"></p>
       <ScrollableAnchor id="about">

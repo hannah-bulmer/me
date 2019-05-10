@@ -99,7 +99,7 @@ const particlesOptions = {
 
 class ParticleComponent extends Component {
   render() {
-    return <Particles className='particles' params={particlesOptions} />
+    return <Particles id="canvas" className='particles' params={particlesOptions} />
   }
 }
 

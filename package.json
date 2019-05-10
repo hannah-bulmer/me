@@ -2,7 +2,7 @@
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://hannah-bulmer.github.io/react-website/",
+  "homepage": "https://hannah-bulmer.github.io/",
   "dependencies": {
     "ajv": "^6.8.1",
     "create-react-class": "^15.6.3",

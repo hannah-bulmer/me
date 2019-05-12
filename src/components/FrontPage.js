@@ -14,6 +14,8 @@ class FrontPage extends React.Component {
         <header className="header">
           <button className="App headerTabs" onClick={this.props.scrollToAbout}>About</button>
           <button className="App headerTabs" onClick={this.props.scrollToProjects}>Projects</button>
+          <button className="App headerTabs" onClick={this.props.scrollToExperiences}>Experience</button>
+
         </header>
           <div className="title">Hannah Bulmer</div>
           <h4>Aspiring computer scientist • Coffee enthusiast</h4>

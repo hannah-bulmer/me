@@ -1,23 +1,10 @@
 import React from 'react';
 
 class Checkbox extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      checked: false,
-    }
-  }
-
-  componentDidMount() {
-    this.setState({ checked: this.props.checked })
-  }
-
-  onClick = () => this.setState({ checked: !this.state.checked })
-
   render() {
     return (
       <div style={{"padding-bottom": "10px"}}>
-        <input type="checkbox" checked={this.state.checked} onClick={this.onClick} />
+        <input type="checkbox" value={this.props.value} checked={this.props.checked} onClick={this.props.onClick} />
         <span>{this.props.caption}</span><img className={"sprite "+this.props.className} src={this.props.sprite} height={this.props.size} width={this.props.size} />
       </div>
     );

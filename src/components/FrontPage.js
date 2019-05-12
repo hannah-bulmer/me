@@ -10,9 +10,10 @@ class FrontPage extends React.Component {
 
   render() {
     return (
-      <div className="mainPage">
+      <div className="page">
         <header className="header">
           <button className="App headerTabs" onClick={this.props.scrollToAbout}>About</button>
+          <button className="App headerTabs" onClick={this.props.scrollToProjects}>Projects</button>
         </header>
           <div className="title">Hannah Bulmer</div>
           <h4>Aspiring computer scientist • Coffee enthusiast</h4>

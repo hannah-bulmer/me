@@ -18,7 +18,7 @@ class Checkbox extends React.Component {
     return (
       <div style={{"padding-bottom": "10px"}}>
         <input type="checkbox" checked={this.state.checked} onClick={this.onClick} />
-        <span>{this.props.caption}</span><img className="sprite" src={this.props.sprite} height={this.props.size} width={this.props.size} />
+        <span>{this.props.caption}</span><img className={"sprite "+this.props.className} src={this.props.sprite} height={this.props.size} width={this.props.size} />
       </div>
     );
   }

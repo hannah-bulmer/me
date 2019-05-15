@@ -7,6 +7,8 @@ class FrontPage extends React.Component {
     this.state = {
       weather: '',
       showDropdown: false,
+      error: '',
+      isLoading: false,
     }
     this.myDropdown = React.createRef();
   }
@@ -26,11 +28,18 @@ class FrontPage extends React.Component {
   }
 
   getWeather = async (id) => {
-    const Api_Key = '859499bfed4c14594bd97b7545189cfb';
-    const api_call = await fetch(`http://api.openweathermap.org/data/2.5/weather?id=${id}&appid=${Api_Key}`);
+    try {
+      const Api_Key = '859499bfed4c14594bd97b7545189cfb';
+      const api_call = await fetch(`http://api.openweathermap.org/data/2.5/weather?id=${id}&appid=${Api_Key}`);
       const response = await api_call.json();
       this.setState({ weather: response })
-    console.log("Getting response");
+      console.log("Getting response");
+    } catch (error) {
+      this.setState({
+        error,
+        isLoading: false
+      });
+    }
   }
 
   getNewWeather = (e) => {

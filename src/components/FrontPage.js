@@ -24,7 +24,9 @@ class FrontPage extends React.Component {
 
   handleClick = (e) => {
     console.log(e.target);
-    if (!this.myDropdown.contains(e.target)) this.openDropdown();
+    if (!this.myDropdown.contains(e.target)) {
+      this.setState({ showDropdown: false });
+    }
   }
 
   getWeather = async (id) => {
@@ -33,7 +35,6 @@ class FrontPage extends React.Component {
       const api_call = await fetch(`https://api.openweathermap.org/data/2.5/weather?id=${id}&appid=${Api_Key}`);
       const response = await api_call.json();
       this.setState({ weather: response })
-      console.log("Getting response");
     } catch (error) {
       this.setState({
         error,
@@ -65,6 +66,7 @@ class FrontPage extends React.Component {
           <button value={6167865} onClick={this.getNewWeather}>Toronto</button>
           <button value={6176823} onClick={this.getNewWeather}>Waterloo</button>
           <button value={5128638} onClick={this.getNewWeather}>New York</button>
+          <button value={2654675} onClick={this.getNewWeather}>Bristol</button>
       </div>
     </div>
     )

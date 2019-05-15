@@ -30,7 +30,7 @@ class FrontPage extends React.Component {
   getWeather = async (id) => {
     try {
       const Api_Key = '859499bfed4c14594bd97b7545189cfb';
-      const api_call = await fetch(`http://api.openweathermap.org/data/2.5/weather?id=${id}&appid=${Api_Key}`);
+      const api_call = await fetch(`https://api.openweathermap.org/data/2.5/weather?id=${id}&appid=${Api_Key}`);
       const response = await api_call.json();
       this.setState({ weather: response })
       console.log("Getting response");
